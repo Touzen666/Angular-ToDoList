@@ -8,7 +8,7 @@
       <div class="col-sm-10">
         <input
           type="text"
-          #Name="ngModel"
+          #Name
           [{ngModel}]="registratonService.selectedUser.Name"
           name="name"
           class="form-control"
@@ -21,7 +21,7 @@
       <div class="col-sm-10">
         <input
           type="email"
-          #Email="ngModel"
+          #Email
           [{ngModel}]="registratonService.selectedUser.Email"
           name="email"
           class="form-control"
@@ -36,7 +36,7 @@
       <div class="col-sm-10">
         <input
           type="password"
-          #Password="ngModel"
+          #Password
           [{ngModel}]="registratonService.selectedUser.Password"
           name="password"
           class="form-control"
@@ -49,7 +49,7 @@
       <div class="col-sm-10">
         <input
           type="number"
-          #Age="ngModel"
+          #Age
           [{ngModel}]="registratonService.selectedUser.Age"
           name="age"
           class="form-control"
