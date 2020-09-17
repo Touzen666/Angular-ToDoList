@@ -1,74 +1,82 @@
-<div class="container" style="margin-top: 100px">
-  <form
-    #singUpForm="ngForm"
-    (ngSubmit)="singUpForm.valid && onSubmit(singUpForm)"
-  >
-    <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">name</label>
-      <div class="col-sm-10">
-        <input
-          type="text"
-          #Name="ngModel"
-          [{ngModel}]="registratonService.selectedUser.Name"
-          name="name"
-          class="form-control"
-          id="name"
-        />
-      </div>
+<div class="left-side">
+  <img class="left-img" src="../../assets/ToDo.png" alt="" />
+</div>
+<div class="right-side container">
+  <div class="container form-container">
+    <div class="register-img-container">
+      <img class="register-img" src="../../assets/register.jpg" alt="" />
     </div>
-    <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input
-          type="email"
-          #Email="ngModel"
-          [{ngModel}]="registratonService.selectedUser.Email"
-          name="email"
-          class="form-control"
-          id="email"
-        />
+    <form
+      #singUpForm="ngForm"
+      (ngSubmit)="singUpForm.valid && onSubmit(singUpForm)"
+    >
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            #name
+            [ngModel]="registratonService.selectedUser.name"
+            name="name"
+            class="form-control"
+            id="name"
+          />
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label"
-        >Password</label
-      >
-      <div class="col-sm-10">
-        <input
-          type="password"
-          #Password="ngModel"
-          [{ngModel}]="registratonService.selectedUser.Password"
-          name="password"
-          class="form-control"
-          id="password"
-        />
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input
+            type="email"
+            #email
+            [ngModel]="registratonService.selectedUser.email"
+            name="email"
+            class="form-control"
+            id="email"
+          />
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Age</label>
-      <div class="col-sm-10">
-        <input
-          type="number"
-          #Age="ngModel"
-          [{ngModel}]="registratonService.selectedUser.Age"
-          name="age"
-          class="form-control"
-          id="age"
-        />
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label"
+          >Password</label
+        >
+        <div class="col-sm-10">
+          <input
+            type="password"
+            #password
+            [ngModel]="registratonService.selectedUser.password"
+            name="password"
+            class="form-control"
+            id="password"
+          />
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-success" value="Register">
-          Sign in
-        </button>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+          <input
+            type="number"
+            #age
+            [ngModel]="registratonService.selectedUser.age"
+            name="age"
+            class="form-control"
+            id="age"
+          />
+        </div>
       </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-danger" value="Register">
+            Sign in
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="success" *ngIf="showSuccessMessage">
+      Saved register form successfully
     </div>
-  </form>
-  <div class="success" *ngIf="showSuccessMessage">
-    Saved register form successfully
-  </div>
-  <div class="alert" *ngIf="showErrorMessage">
-    {{ serverErrorMessage }}
+    <div class="alert" *ngIf="serverErrorMessage">
+      {{ serverErrorMessage }}
+    </div>
   </div>
 </div>

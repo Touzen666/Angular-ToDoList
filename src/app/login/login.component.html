@@ -1,0 +1,43 @@
+<div class="left-side">
+  <img class="left-img" src="../../assets/ToDo.png" alt="" />
+</div>
+<div class="right-side container">
+  <div class="container form-container">
+    <div class="register-img-container">
+      <img class="register-img" src="../../assets/login.png" alt="" />
+    </div>
+    <form #singUpForm="ngForm">
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" name="email" class="form-control" id="email" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label"
+          >Password</label
+        >
+        <div class="col-sm-10">
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+          />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-danger" value="Register">
+            Sign up
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- <div class="alert" *ngIf="serverErrorMessage">
+      {{ serverErrorMessage }}
+    </div> -->
+  </div>
+</div>

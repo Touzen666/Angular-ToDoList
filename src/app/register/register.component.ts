@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   serverErrorMessage: string;
 
   // user;
-  constructor(private registratonService: RegistrationService) {
+  constructor(public registratonService: RegistrationService) {
     // this.user = service.postRegister();
     // console.log(this.user);
   }
